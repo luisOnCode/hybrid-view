@@ -1,46 +1,127 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hybrid-view_front</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <section>
-          <h1>HybridView</h1>
-        </section>
-        <section>
-          <ul>
-            <li>
-              <button>Tasks</button>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <ul>
-            <li>
-              <button>Configs</button>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    </header>
-    <main>
-      <section id="task-page_side-menu">
-        <h2 id="task-page_side-menu_title">Atomic To-Do List</h2>
-        <section id="task-page_side-menu_statistics">
-          <ul>
-            <li>10% of tasks completed</li>
-            <li></li>
-            <li></li>
-          </ul>
 
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hybrid-view_front</title>
+
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <section>
+        <h1>HybridView</h1>
+      </section>
+      <section id="main_navbar">
+        <ul>
+          <li>
+            <button>Tasks</button>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <li>
+            <button>Configs</button>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+  <main>
+    <section id="task-page_side-menu">
+      <h2 id="task-page_side-menu_title">Atomic To-Do List</h2>
+      <section id="task-page_side-menu_statistics">
+        <ul id="task-page_side-menu_statistics_fast-list">
+          <li>10% of tasks completed</li>
+          <li>4 urgent tasks</li>
+          <li>5 different projects displayed</li>
+        </ul>
+        <section id="task-page_side-menu_statistics_diagram">
+          <p id="task-page_side-menu_statistics_diagram_design">24/32</p>
+          <p id="task-page_side-menu_statistics_diagram_simple-text">tasks completed</p>
         </section>
       </section>
-      <section></section>
-    </main>
-  </body>
+      <button id="task-page_side-menu_new-items-btn">+ New Task Node</button>
+    </section>
+    <section id="task-page_main-view">
+      <nav id="task-page_main-view_filter">
+        <section id="task-page_main-view_filter_property-bar">
+          <ul>
+            <li id="task-page_main-view_filter_property-bar_status">
+              <button>status: all</button>
+            </li>
+            <li id="task-page_main-view_filter_property-bar_priority">
+              <button>priority: all</button>
+            </li>
+            <li id="task-page_main-view_filter_property-bar_category">
+              <button>category: all</button>
+            </li>
+          </ul>
+        </section>
+        <section id="task-page_main-view_filter_date-select">
+          <p>temporal reference</p>
+          <button>Oct 24, 2023</button>
+        </section>
+      </nav>
+      <section id="task-page_main-view_task-panel">
+        <ul>
+          <li class="card-item">
+            <section class="card-item-info"></section>
+            <section class="task-item task-item-with-children">
+              <hr class="vertical-indicator-line">
+              <section class="task-item-status">
+                <input type="checkbox">
+                <p class="task-item_description">Implement dark mode shader compilation</p>
+                <section class="task-item_info">
+                  <span class="task-item_update-time">Created: 2023-10-24 09:15</span>
+                  <span class="task-item_estimated-time">
+                    Est: <span class="task-item_estimated-time_priority">14:00 (URGENT)</span>
+                  </span>
+                </section>
+              </section>
+              <ul class="task-item-children">
+                <li class="task-item">
+                  <hr class="vertical-indicator-line">
+                  <section class="task-item-status">
+                    <input type="checkbox" checked>
+                    <p class="task-item_description">Optimize fragment shader loops</p>
+                    <section class="task-item_info">
+                      <span class="task-item_update-time">Completed: 2023-10-24 11:12</span>
+                      <span class="task-item_estimated-time">
+                        Est: <span class="task-item_estimated-time_priority">11:15</span>
+                      </span>
+                    </section>
+                  </section>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li class="card-item">
+            <section class="card-item-info"></section>
+            <section class="task-item task-item-with-children">
+              <hr class="vertical-indicator-line">
+              <section class="task-item-status">
+                <input type="checkbox">
+                <p class="task-item_description">Implement dark mode shader compilation</p>
+                <section class="task-item_info">
+                  <span class="task-item_update-time">Created: 2023-10-24 09:15</span>
+                  <span class="task-item_estimated-time">
+                    Est: <span class="task-item_estimated-time_priority">14:00 (URGENT)</span>
+                  </span>
+                </section>
+              </section>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
+</body>
+
 </html>
