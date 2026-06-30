@@ -1,5 +1,6 @@
 * {
-  list-style: none
+  list-style: none;
+  font-family: "Space Mono", monospace;
 }
 
 body {
@@ -18,17 +19,20 @@ header > nav {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 4fr;
   justify-content: center;
   padding: 10px;
 }
 
 #task-page_side-menu {
   justify-self: center;
+  display: none;
 }
 
 #task-page_main-view {
   justify-self: center;
+  display: grid;
+  gap: 5%;
 }
 
 #task-page_main-view_filter {
@@ -43,21 +47,3 @@ main {
   gap: 5px;
 }
 
-.task-item {
-  display: column;
-  grid-template-areas:
-  'hr section'
-  'ul ul';
-}
-
-.vertical-indicator-line {
-  grid-area: hr;
-}
-
-.task-item-status {
-  grid-area: section;
-}
-
-.task-item-children {
-  grid-area: ul;
-}

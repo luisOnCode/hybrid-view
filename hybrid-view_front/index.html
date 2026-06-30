@@ -8,7 +8,9 @@
   <title>hybrid-view_front</title>
 
   <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="src/import.css">
   <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="src/card.css">
 </head>
 
 <body>
@@ -20,14 +22,14 @@
       <section id="main_navbar">
         <ul>
           <li>
-            <button>Tasks</button>
+            <button>tasks</button>
           </li>
         </ul>
       </section>
       <section>
         <ul>
           <li>
-            <button>Configs</button>
+            <button>settings</button>
           </li>
         </ul>
       </section>
@@ -66,57 +68,76 @@
         </section>
         <section id="task-page_main-view_filter_date-select">
           <p>temporal reference</p>
-          <button>Oct 24, 2023</button>
+          <button>oct 24, 2023</button>
         </section>
       </nav>
       <section id="task-page_main-view_task-panel">
         <ul>
           <li class="card-item">
-            <section class="card-item-info"></section>
-            <section class="task-item task-item-with-children">
-              <hr class="vertical-indicator-line">
-              <section class="task-item-status">
-                <input type="checkbox">
-                <p class="task-item_description">Implement dark mode shader compilation</p>
-                <section class="task-item_info">
-                  <span class="task-item_update-time">Created: 2023-10-24 09:15</span>
-                  <span class="task-item_estimated-time">
-                    Est: <span class="task-item_estimated-time_priority">14:00 (URGENT)</span>
-                  </span>
-                </section>
+            <section class="card-item_content">
+              <section class="card-item_content_info">
+                <h4>card name</h4>
+                <p>1/4 completed tasks</p>
               </section>
-              <ul class="task-item-children">
-                <li class="task-item">
-                  <hr class="vertical-indicator-line">
-                  <section class="task-item-status">
-                    <input type="checkbox" checked>
-                    <p class="task-item_description">Optimize fragment shader loops</p>
-                    <section class="task-item_info">
-                      <span class="task-item_update-time">Completed: 2023-10-24 11:12</span>
-                      <span class="task-item_estimated-time">
-                        Est: <span class="task-item_estimated-time_priority">11:15</span>
-                      </span>
+              <ul class="task-item_list">
+                <li>
+                  <section class="task-item_box">
+                    <hr class="vertical-indicator-line">
+                    <section class="task-item_content">
+                      <div>
+                        <input type="checkbox" class="task-item_checkbox">
+                        <p class="task-item_description">Implement dark mode shader compilation</p>
+                        <section class="task-item_info">
+                          <span class="task-item_update-time">Created: 2023-10-24 09:15</span>
+                          <span class="task-item_estimated-time">
+                            Est: <span class="task-item_estimated-time_priority">14:00 (URGENT)</span>
+                          </span>
+                        </section>
+                      </div>
+                      <ul class="task-item_children">
+                        <li>
+                          <section class="task-item_box">
+                            <hr class="vertical-indicator-line">
+                            <section class="task-item_content">
+                              <div>
+                                <input type="checkbox" class="task-item_checkbox">
+                                <p class="task-item_description">Implement dark mode shader compilation</p>
+                                <section class="task-item_info">
+                                  <span class="task-item_update-time">Created: 2023-10-24 09:15</span>
+                                  <span class="task-item_estimated-time">
+                                    Est: <span class="task-item_estimated-time_priority">14:00 (URGENT)</span>
+                                  </span>
+                                </section>
+                              </div>
+                              <ul class="task-item_children">
+                              </ul>
+                            </section>
+                          </section>
+                        </li>
+                      </ul>
+                    </section>
+                  </section>
+                </li>
+                <li>
+                  <section class="task-item_box">
+                    <hr class="vertical-indicator-line">
+                    <section class="task-item_content">
+                      <div>
+                        <input type="checkbox" class="task-item_checkbox">
+                        <p class="task-item_description">Implement dark mode shader compilation</p>
+                        <section class="task-item_info">
+                          <span class="task-item_update-time">Created: 2023-10-24 09:15</span>
+                          <span class="task-item_estimated-time">
+                            Est: <span class="task-item_estimated-time_priority">14:00 (URGENT)</span>
+                          </span>
+                        </section>
+                      </div>
+                      <ul class="task-item_children">
+                      </ul>
                     </section>
                   </section>
                 </li>
               </ul>
-            </section>
-          </li>
-          <li class="card-item">
-            <section class="card-item-info"></section>
-            <section class="task-item task-item-with-children">
-              <hr class="vertical-indicator-line">
-              <section class="task-item-status">
-                <input type="checkbox">
-                <p class="task-item_description">Implement dark mode shader compilation</p>
-                <section class="task-item_info">
-                  <span class="task-item_update-time">Created: 2023-10-24 09:15</span>
-                  <span class="task-item_estimated-time">
-                    Est: <span class="task-item_estimated-time_priority">14:00 (URGENT)</span>
-                  </span>
-                </section>
-              </section>
-            </section>
           </li>
         </ul>
       </section>

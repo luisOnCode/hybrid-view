@@ -1,0 +1,61 @@
+.card-item_content {
+    background-color: rgb(219, 219, 219);
+    padding: 5px;
+}
+
+.card-item_content_info {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.task-item_list {
+    padding: 5px 0;
+}
+
+.task-item_box {
+    background-color: rgb(201, 201, 201);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px 0 10px 5px;
+}
+
+.vertical-indicator-line {
+    width: 3px;
+    height: 100%;
+    border: none;
+    background-color: rgb(141, 141, 141);
+    align-self: center;
+}
+
+.task-item_content > div {
+    display: grid;
+    grid-template-areas:
+    'checkbox description'
+    'info info'
+    'children children';
+    grid-template-columns: auto 1fr;
+    gap: 0 5px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+.task-item_checkbox {
+    grid-area: checkbox;
+    justify-self: start;
+}
+
+.task-item_description {
+    grid-area: description;
+    justify-self: start;
+}
+
+.task-item_info {
+    grid-area: info;
+}
+
+.task-item_children {
+    grid-area: children;
+}
